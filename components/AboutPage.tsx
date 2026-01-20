@@ -22,7 +22,6 @@ const AboutPage: React.FC = () => {
     contactName: '',
     email: '',
     phone: '',
-    website: '',
     businessType: '',
     message: ''
   });
@@ -52,11 +51,15 @@ const AboutPage: React.FC = () => {
           body: JSON.stringify({
             ...formData,
             _subject: `New Partner Application: ${formData.businessName}`,
+            _captcha: 'false'
           })
         });
 
+        if (!response.ok) throw new Error('Form submission failed');
         const result = await response.json();
-        if (!result.success) throw new Error('Form submission failed');
+        if (result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'Form submission failed');
+        }
       } else {
         // Store locally when no endpoint configured
         const submissions = JSON.parse(localStorage.getItem('partnerSubmissions') || '[]');
@@ -70,7 +73,6 @@ const AboutPage: React.FC = () => {
         contactName: '',
         email: '',
         phone: '',
-        website: '',
         businessType: '',
         message: ''
       });
@@ -249,18 +251,6 @@ const AboutPage: React.FC = () => {
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-neutral-400 mb-2">Website</label>
-                  <input
-                    type="url"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-neutral-500 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="https://yourbusiness.com"
-                  />
                 </div>
 
                 <div>
