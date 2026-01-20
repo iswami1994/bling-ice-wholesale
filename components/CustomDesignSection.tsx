@@ -2,7 +2,7 @@ import React from 'react';
 
 const CustomDesignSection: React.FC = () => {
   return (
-    <section className="mx-6 lg:mx-10 mb-20 rounded-2xl overflow-hidden relative">
+    <section id="custom-design" className="mx-6 lg:mx-10 mb-20 rounded-2xl overflow-hidden relative">
       <div className="absolute inset-0 bg-[#0f0f0f] blueprint-bg"></div>
       {/* Radial Gradient for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent to-black/80"></div>

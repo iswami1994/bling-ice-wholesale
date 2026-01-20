@@ -1,9 +1,9 @@
 import { Product, Category, NavLink } from './types';
 
 export const NAV_LINKS: NavLink[] = [
-  { label: 'Collections', href: '#' },
-  { label: 'Custom Design', href: '#' },
-  { label: 'About Us', href: '#' },
+  { label: 'Collections', href: '#collections' },
+  { label: 'Custom Design', href: '#custom-design' },
+  { label: 'About Us', href: '#footer' },
 ];
 
 export const CATEGORIES: Category[] = [
