@@ -24,6 +24,12 @@ const Footer: React.FC = () => {
           <p className="text-neutral-500 text-sm max-w-xs">
             The premier B2B destination for urban luxury jewelry. Serving retailers globally with authenticated gold and diamond pieces.
           </p>
+          <address className="not-italic text-neutral-500 text-sm max-w-xs leading-relaxed">
+            <span className="block text-neutral-900 dark:text-white font-semibold">Bling Ice Inc.</span>
+            418 Broadway STE Y<br />
+            Albany, NY 12207<br />
+            <a href="mailto:info@blingice.shop" className="hover:text-primary transition-colors">info@blingice.shop</a>
+          </address>
         </div>
         <div className="flex flex-wrap gap-12 lg:gap-24">
           <div className="flex flex-col gap-4">
@@ -58,7 +64,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-neutral-200 dark:border-[#1f1f1f] text-center md:text-left">
-        <p className="text-neutral-600 dark:text-neutral-500 text-xs">© 2024 Bling Ice Wholesale. All rights reserved.</p>
+        <p className="text-neutral-600 dark:text-neutral-500 text-xs">© 2026 Bling Ice Inc. All rights reserved.</p>
       </div>
     </footer>
   );
